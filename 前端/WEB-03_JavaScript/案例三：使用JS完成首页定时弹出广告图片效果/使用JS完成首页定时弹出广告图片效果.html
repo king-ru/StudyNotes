@@ -1,0 +1,369 @@
+<!--完成轮播图部分：
+步骤分析：
+1.确定事件（onload）并为其绑定一个函数。注意，事件应该在body部分。
+2.书写绑定的这个函数。
+3.书写定时任务：（setInterval）
+4.书写任务里面的函数
+5.通过变量的方式，进行循环，并设置src属性。注意，当循环到最后一张图片时，需要重置循环变量。-->
+
+
+<!--用JS完成首页定时弹出广告步骤分析。
+1.在页面指定位置先隐藏一个广告图片（使用display属性的none值）
+2.确定事件onclick并为其绑定一个函数
+3.书写这个函数（设置一个显示图片的定时操作）
+4.书写定时器函数（获取广告图片的位置设置属性style的display值block）
+5.清除显示图片的定时操作
+6.书写隐藏图片的定时操作
+7.书写定时器中的函数（获取广告图片的位置并设置属性style的display值none）
+8.清除隐藏图片的定时操作。-->
+
+<!--clearInterval（）方法可取消setInterval设置的timeout，其方法的参数必须是setInterval返回的id值。-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<style>
+			#father {
+				border: 0px solid blue;
+				width: 1300px;
+				height: 1980px;
+				margin: auto;
+			}
+			
+			#logo {
+				border: 0px solid red;
+				width: 1300px;
+				height: 40px;
+			}
+			
+			.top {
+				border: 0px solid blue;
+				height: 40px;
+				width: 431px;
+				float: left;
+			}
+			
+			#top {
+				height: 39px;
+				width: 431px;
+				padding-top: 11px;
+			}
+			/*以下代码才能将无序标签弄成一行*/
+			
+			#menu {
+				border: 0px solid red;
+				height: 50px;
+				width: 1300px;
+				background: black;
+			}
+			
+			ul li {
+				display: inline;
+				color: white;
+			}
+			
+			#clear {
+				clear: both;
+			}
+			
+			#product {
+				border: 0px solid red;
+				height: 546px;
+				width: 1300px;
+			}
+			
+			#product-top {
+				border: 0px solid blue;
+				height: 45pxpx;
+				width: 1300px;
+				padding-top: 8px;
+			}
+			
+			#product-bottom {
+				border: 0px solid red;
+				height: 501px;
+				width: 1300px;
+			}
+			
+			#product-bottom-left {
+				border: 0px solid blue;
+				height: 501px;
+				width: 201px;
+				float: left;
+			}
+			
+			#product-bottom-right {
+				border: 0px solid blue;
+				height: 501px;
+				width: 1095px;
+				float: left;
+			}
+			
+			#big {
+				border: 0px solid blue;
+				height: 250px;
+				width: 544px;
+				float: left;
+			}
+			
+			.small {
+				border: 0px solid blue;
+				height: 250px;
+				width: 180px;
+				float: left;
+				text-align: center;
+			}
+			#bottom{
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+		<!--//JavaScript外部引入-->
+		<script type="text/javascript" src="1.js"></script>
+		<!--<script type="text/javascript">//这是默认值
+			//1.为显示图片设置定时器
+			function init(){
+				setInterval("changeImg()",3000);
+				time=setInterval("showAd()",3000);
+				//注意：time不加var是一个成员变量，在其他函数中可以直接用。
+				//如果加了var，就成了局部变量，只能在本函数中用。
+			}
+			var i=1;
+			function changeImg(){
+				i++;
+				document.getElementById("img").src="../img/"+i+".jpg";
+				if(i==3)
+					i=0;
+			}
+			//2.书写显示图片函数
+			function showAd(){
+			//3.获取广告图片所在的位置
+				var adEle=document.getElementById("img1");
+				//4.修改图片属性让其显示
+				adEle.style.display="block";
+				//5.清除显示图片定时操作
+				clearInterval(time);//成员变量不需要加引号
+				//6.设置隐藏图片的定时操作
+				time1=setInterval("hiddenAd()",3000);
+			}
+			//7.书写隐藏图片的函数
+			function hiddenAd(){
+				//8.获取广告图片位置并设置其属性
+				document.getElementById("img1").style.display="none";
+				//注意：none block一定要加引号  要不然没有效果。
+				//9.清除隐藏图片的定时操作
+				clearInterval(time1);
+			}
+		</script>-->
+	</head>
+
+	<body onload="init()">
+		<!--广告图片显示的位置。-->
+		<!--style="display: none;让图片隐藏的标签。-->
+		<img src="../img/f001a62f-a49d-4a4d-b56f-2b6908a0002c_g.jpg" width="100%" id="img1" style="display: none" />
+		
+		<div id="father">
+			<!--1.logo部分-->
+			<div id="logo">
+				<div class="top">
+					<img src="../img/logo2.png" height="46px" />
+				</div>
+				<div class="top">
+					<img src="../img/header.png" height="46px" />
+				</div>
+				<div class="top" id="top">
+					<a href="#">登录</a>
+					<a href="#">注册</a>
+					<a href="#">购物车</a>
+
+				</div>
+				<div id="clear"></div>
+			</div>
+			<!--2.导航栏-->
+			<div id="menu">
+				<ul>
+					<a href="#">
+						<li style="font-size: 25px;">首页</li>&nbsp;&nbsp;&nbsp;
+						<a href="#">
+							<li>数码相机</li>
+						</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">
+							<li>手机</li>
+						</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">
+							<li>电脑</li>
+						</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">
+							<li>家用</li>
+						</a>&nbsp;&nbsp;&nbsp;
+						<a href="#">
+							<li>其他</li>
+						</a>&nbsp;&nbsp;&nbsp;
+				</ul>
+			</div>
+			<!--3.轮播图-->
+			<div id="">
+				<img src="../img/1.jpg" width="100%" id="img" />
+			</div>
+			<!--4.最新商品-->
+			<div id="product">
+				<div id="product-top">
+					&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 25px; ">最新商品</span>&nbsp;&nbsp;&nbsp;
+					<img src="../img/title2.jpg" />
+				</div>
+				<div id="product-bottom">
+					<div id="product-bottom-left">
+						<a href="#"><img src="../img/big01.jpg" width="100%" height="100%" /></a>
+					</div>
+					<div id="product-bottom-right">
+						<div id="big">
+							<a href="#"><img src="../img/middle01.jpg" width="100%" height="100%" /></a>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+
+						<div class="small">
+						    <img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<!--5.广告图片-->
+			<div id="">
+				<img src="../img/ad.jpg" width="100%" />
+			</div>
+			<!--6.热门商品-->
+			<div id="product">
+				<div id="product-top">
+					&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 25px; ">热门商品</span>&nbsp;&nbsp;&nbsp;
+					<img src="../img/title2.jpg" />
+				</div>
+				<div id="product-bottom">
+					<div id="product-bottom-left">
+						<a href="#"><img src="../img/big01.jpg" width="100%" height="100%" /></a>
+					</div>
+					<div id="product-bottom-right">
+						<div id="big">
+							<a href="#"><img src="../img/middle01.jpg" width="100%" height="100%" /></a>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+
+						<div class="small">
+						    <img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" />
+							<a href="#"><p style="font-size: 20px; color: gray;">冬瓜</p></a>
+							<p style="font-size: 25px; color: red;">￥200</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<!--7.广告图片-->
+			<div id="">
+				<img src="../img/footer.jpg" width="100%" />
+			</div>
+			<!--8.友情链接-->
+			<div id="bottom">
+					<a href="#">关于我们</a>&nbsp;&nbsp;
+					<a href="#">联系我们</a>&nbsp;&nbsp;
+					<a href="#">招贤纳士</a>&nbsp;&nbsp;
+					<a href="#">法律声明 </a>&nbsp;&nbsp;
+					<a href="#">友情链接</a>&nbsp;&nbsp;
+					<a href="#">支付方式</a>&nbsp;&nbsp;
+					<a href="#">配送方式</a>&nbsp;&nbsp;
+					<a href="#">服务声明</a>&nbsp;&nbsp;
+					<a href="#">广告声明</a>
+			</div>
+		</div>
+	</body>
+
+</html>

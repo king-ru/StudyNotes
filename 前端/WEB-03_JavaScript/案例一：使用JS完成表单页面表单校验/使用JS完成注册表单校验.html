@@ -1,0 +1,233 @@
+<!--JavaScript中实现步骤分析：
+1.确定事件（onsubmit）并为其绑定一个函数。
+2.书写这个函数（获取用户输入的数据（获取数据时需要在指定位置定义一个id））
+3.对用户输入的数据进行判断。
+4.数据合法（让表单提交）
+5.数据不合法（不让表单提交）
+
+问题：如何控制表单提交？
+	关于事件onsubmit：一般用于表单提交的位置，需要在定义函数时给出一个返回值。
+	onsubmit=return checkForm（）；-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<script>
+			function checkForm(){
+			 //校验用户名
+			 //1.获取用户输入的数据
+			 var uValue=document.getElementById("name").value;
+			 //2.对数据进行校验，如果为空，给出错误提示信息。
+			 if(uValue==""){
+			 	alert("用户名不能为空");
+			 	return false;
+			 }
+			 //3.校验密码
+			 var pValue=document.getElementById("password").value;
+			 if(pValue==""){
+			 	alert("密码不能为空");
+			 	return false;
+			 }
+			 4.//校验repassword
+			 var rpValue=document.getElementById("repassword").value;
+			 if(rpValue!=pValue){
+			 	alert("密码不相同");
+			 	return false;
+			 }
+			 //5.校验邮箱，用正则表达式
+			 var eValue=document.getElementById("email").value;
+			 if(!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(eValue)){
+			 	alert("邮箱格式不正确");
+			 	return false;
+			 }
+			}
+		</script>
+	</head>
+
+	<body>
+		<table border="1px" align="center" width="1300px" cellpadding="0px" cellspacing="0px">
+			<!--1.logo部分-->
+			<tr>
+				<td>
+					<!--嵌套一个一行三列的表格-->
+					<!--align：对齐方式-->
+					<!--cellpadding：单元格边距  cellspacing：单元格间距-->
+					<table border="1px" align="center" width="100%" cellpadding="0px" cellspacing="0px">
+						<tr height="50px" bgcolor="white">
+							<td width="33.3%">
+								<img src="../img/logo2.png" height="47px" />
+							</td>
+							<td width="33.3%">
+								<img src="../img/header.png" />
+							</td>
+							<!--三个超链接-->
+							<td width="33.3%">
+								<a href="#">登陆</a>&nbsp;&nbsp;
+								<a href="#">注册</a>&nbsp;&nbsp;
+								<a href="#">购物车</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+
+			</tr>
+			<!--2.导航栏部分-->
+			<tr height="50px" bgcolor="black">
+				<td>
+					<!--为了显示颜色，采用超链接和字体标签结合的方式-->
+					<a href="#">
+						<font size="3" color="white">首页</font>
+					</a>
+					<a href="#">
+						<font color="white">雪莲</font>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">陈茹</font>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">桌子</font>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<font color="white">二憨</font>
+					</a>
+				</td>
+
+			</tr>
+			<!--3.注册表单部分-->
+			<tr>
+				<td height="600px" background="../img/Cache_-75f9ee7164e988ad..jpg">
+					<!--嵌套一个10行2列的表格。-->
+					<!--会员注册-->
+					<form action="#" method="get" name="regForm" onsubmit="return checkForm()">
+						<table bgcolor="white" border="1px" width="750px" height="400px" align="center" cellpadding="0px" cellspacing="0px">
+							<tr height="40px">
+								<td colspan="2">
+									<font color="red" size="4">会员注册</font>&nbsp;&nbsp;&nbsp;USER REGISTER
+
+								</td>
+
+							</tr>
+							<!--用户名-->
+							<tr>
+								<td>
+									用户名
+								</td>
+								<td>
+									<input type="text" name="name" id="name"/>
+								</td>
+							</tr>
+							<!--密码-->
+							<tr>
+								<td>
+									密码
+								</td>
+								<td>
+									<input type="password" name="password" id="password"/>
+								</td>
+							</tr>
+							<!--确认密码-->
+							<tr>
+								<td>
+									确认密码
+								</td>
+								<td>
+									<input type="password" name="enpassword" id="repassword"/>
+								</td>
+							</tr>
+							<!--email-->
+							<tr>
+								<td>
+									email
+								</td>
+								<td>
+									<input type="text" name="email" id="email"/>
+								</td>
+							</tr>
+							<!--姓名-->
+							<tr>
+								<td>
+									姓名
+								</td>
+								<td>
+									<input type="text" name="username" />
+								</td>
+							</tr>
+							<!--性别-->
+							<tr>
+								<td>
+									性别
+								</td>
+								<td>
+									<input type="radio" value="男" />男
+									<input type="radio" value="女" />女
+								</td>
+							</tr>
+							<!--出生日期-->
+							<tr>
+								<td>
+									出生日期
+								</td>
+								<td>
+									<select name="birthday" />
+									<option>--请选择---</option>
+									<option value="1997">--1997---</option>
+									<option value="1998">--1998---</option>
+									<!--selected="selected"代表一加载网页就会直接勾选上海。-->
+									<option value="1999">--1999---</option>
+								</td>
+							</tr>
+							<!--验证码-->
+							<tr>
+								<td>
+									验证码
+								</td>
+								<td>
+									<input type="text" name="yzm" />
+									<img src=",,/img/null-ae1d3267cdf28ab.jpg" width="90px" height="35px" />
+								</td>
+							</tr>
+							<!--注册-->
+							<tr>
+								<td colspan="2" align="center">
+									<input type="submit" value="提交" />
+
+								</td>
+
+							</tr>
+						</table>
+					</form>
+				</td>
+
+			</tr>
+
+			<!--4.广告图片-->
+			<tr>
+				<td>
+					<img src="../img/footer.jpg" width="100%" />
+				</td>
+
+			</tr>
+			<!--5.友情链接和版权信息-->
+			<tr>
+				<td align="center">
+					<a href="#">关于我们</a>&nbsp;&nbsp;
+					<a href="#">联系我们</a>&nbsp;&nbsp;
+					<a href="#">招贤纳士</a>&nbsp;&nbsp;
+					<a href="#">法律声明 </a>&nbsp;&nbsp;
+					<a href="#">友情链接</a>&nbsp;&nbsp;
+					<a href="#">支付方式</a>&nbsp;&nbsp;
+					<a href="#">配送方式</a>&nbsp;&nbsp;
+					<a href="#">服务声明</a>&nbsp;&nbsp;
+					<a href="#">广告声明</a>
+				</td>
+				<p>
+					版权陈茹所有
+				</p>
+
+			</tr>
+		</table>
+	</body>
+
+</html>

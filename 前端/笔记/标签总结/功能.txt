@@ -1,0 +1,70 @@
+HTML是页面的骨架
+CSS对内容进一步的装饰
+JavaScrip使页面实现动态效果
+
+JavaScript的组成部分：
+1.ECMAScript：它是整个JavaScript的核心，包含（基本语法，变量，关键字，保留字，数据类型，语句，函数等等）
+	有5种数据类型：Undefined，Null，Boolean，Number，String。
+	null和undefined的区别：null指的是该对象就不存在，undefined指的是该对象存在，但没有被赋值。
+2.DOM：文档对象类型，包含（整个HTML页面的内容）
+3.BOM：浏览器对象模型，包含（整个浏览器相关内容）
+
+声明变量类型
+当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+
+var carname=new String;
+var x=      new Number;
+var y=      new Boolean;
+var cars=   new Array;
+var person= new Object;
+JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。
+
+JavaScript中通过id获取元素：document.getElementById(id名称);
+获取元素里面的值：document.getElementById(id名称).value;
+注意：如果id是一个字符串，那么需要加上引号，如果是其他元素，则不需要。
+
+
+JavaScript事件：表单提交事件：onsubmit
+JavaScript的输出：
+警告框：alert();
+向指定位置写入内容：innerHTML  如：document.getElementById("demo").innerHTML="my first javascript";
+向页面写入内容：document.write("");
+
+获取标号前面的一个复选框：var checkEle=document.getElementById("id");
+获取全部复选框：var checkAllEle=document.getElementByName("name");
+此时checkAllEle是一个数组，要对其进行遍历。
+for(var i=0;i<checkAllEle.length:i++)
+	checkAllEle[i].checked==true;
+判断是否选中复选框：if（checkEle.checked==true）
+
+JavaScript的DOM对象：
+1.Document对象：整个HTML文件都成为一个document文档。
+	每个载入浏览器的HTML文档都会成为Document对象。
+	重点方法：
+	getElementById（）；
+	getElementByName（）； 返回带有指定名称的对象集合
+	getElementByTagName（）；返回带有指定标签的对象的集合
+	
+	后面两个都需要遍历，HTML中不存在集合，只存在数组。
+	
+2.Element对象：所有标签都是Element元素
+	所认知的HTML页面中的所有标签
+	重点方法：
+	element.appendChild() 向元素添加新的子节点，作为最后一个子节点 
+	element.firstChild 返回元素的首个子。 
+	element.getAttribute() 返回元素节点的指定属性值。 
+	element.getAttributeNode() 返回指定的属性节点。 
+	element.innerHTML 设置或返回元素的内容。 
+	element.insertBefore() 在指定的已有的子节点之前插入新节点。 
+	element.lastChild 返回元素的最后一个子元素。 
+
+
+	
+3.Attribute对象：标签里面的属性
+4.Text对象：标签中间夹着的内容为text文本
+5.Node对象：document，element，attribute，text统称为节点node
+	创建文本节点：document.createTextNode（）；
+	创建元素节点：document.createElement（）；
+
+
+

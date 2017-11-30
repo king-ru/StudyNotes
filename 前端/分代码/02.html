@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>CR个人网站</title>
+
+		<style>
+			#father {
+				border: 1px solid white;
+				width: 1352px;
+				height: 2000px;
+				margin: auto;
+			}
+			
+			#menu {
+				border: 1px solid lightgray;
+				height: 50px;
+				width: 100%;
+				background: gray;
+			}
+			
+			#radio {
+				border: 1px solid lightgray;
+				height: 50px;
+				width: 100%;
+				background: gray;
+			}
+			
+			#search {
+				background: white;
+				width: 300px;
+				height: 50px;
+				align-content: center;
+			}
+			/*以下代码才能将无序标签弄成一行*/
+			
+			ul li {
+				display: inline;
+				color: white;
+			}
+			
+			#clear {
+				clear: both;
+			}
+			
+			#product {
+				border: 1px solid white;
+				height: 563px;
+				width: 100%;
+			}
+			
+			#product-top {
+				border: 1px solid white;
+				height: 45px;
+				width: 100%;
+				padding-top: 8px;
+			}
+			
+			#product-bottom {
+				border: 1px solid white;
+				height: 505px;
+				width: 100%;
+			}
+			
+			#product-bottom-left {
+				border: 1px solid white;
+				height: 505px;
+				width: 241px;
+				float: left;
+			}
+			
+			#product-bottom-right {
+				border: 1px solid white;
+				height: 501px;
+				width: 1101px;
+				float: left;
+			}
+			
+			.small {
+				border: 1px solid white;
+				height: 250px;
+				width: 181px;
+				float: left;
+				text-align: center;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.input-box {
+				position: relative;
+				width: 200px;
+				height: 50px;
+			}
+			#youqing{
+				text-align: center;
+			}
+		</style>
+		
+		<script type="text/javascript" src="02.js"></script>
+		
+			
+	</head>
+
+	<body onload="init()">
+
+		<div id="father">
+			<!--1.搜索框部分-->
+			<div class="input-box">
+				<table width="1352px" height="50px" border="0px solid gray" align="center">
+					<tr>
+						<td align="center">
+							<input type="text" name="search" value="" placeholder="搜搜" style="width:420px;height:30px" />
+
+						</td>
+						<td>
+							<button style="width:80px;height:30px;">
+								百度一下
+							</button>
+						</td>
+
+					</tr>
+				</table>
+
+			</div>
+
+			<!--logo-->
+			<div id="menu">
+
+				<ul>
+					<a href="#">
+						<li style="font-size: 25px;">读书</li>&nbsp;&nbsp;&nbsp;
+					</a>
+					<a href="#">
+						<li>音乐</li>
+					</a>&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>电影</li>
+					</a>&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>电台</li>
+					</a>&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>排行榜</li>
+					</a>&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>更多</li>
+					</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>登录</li>
+					</a>&nbsp;&nbsp;&nbsp;
+					<a href="01.html">
+						<li>注册</li>
+					</a>&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>购物车</li>
+					</a>
+					<ul>
+
+			</div>
+
+			<!--.轮播图-->
+			<div id="">
+				<img src="img/1.jpg" width="100%" height="600px" id="img" />
+			</div>
+			<!--.最新商品-->
+			<div id="product">
+				<div id="product-top">
+					&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 25px; ">最新商品</span>&nbsp;&nbsp;&nbsp;
+
+				</div>
+				<div id="product-bottom">
+					<div id="product-bottom-left">
+						<a href="#"><img src="img/209922861c37925609352706506b1fbc.jpg" width="100%" height="100%" /></a>
+					</div>
+					<div id="product-bottom-right">
+						<div class="small" onmouseover="changeColor('tr1','cornflowerblue')" onmouseout="changeColor('tr1','white')" id="tr1">
+
+							<img src="img/匆匆那年.jpg" / width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">匆匆那年</p>
+							</a>
+
+						</div>
+						
+						<div class="small" class="small" onmouseover="changeColor('tr2','cornflowerblue')" onmouseout="changeColor('tr2','white')" id="tr2">
+
+							<img src="img/搜狗截图20170829180247.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">穿过生命中的泥泞时刻</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr3','cornflowerblue')" onmouseout="changeColor('tr3','white')" id="tr3">
+
+							<img src="img/搜狗截图20170829180736.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">关于设计的思考</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr4','cornflowerblue')" onmouseout="changeColor('tr4','white')" id="tr4">
+
+							<img src="img/搜狗截图20170829180808.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">走出中东</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr5','cornflowerblue')" onmouseout="changeColor('tr5','white')" id="tr5">
+
+							<img src="img/搜狗截图20170829180828.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">小小巴黎书店</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr6','cornflowerblue')" onmouseout="changeColor('tr6','white')" id="tr6">
+
+							<img src="img/搜狗截图20170829180859.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">孤独的城市</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr7','cornflowerblue')" onmouseout="changeColor('tr7','white')" id="tr7">
+
+							<img src="img/搜狗截图20170829180922.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">等你的呼唤我的名字</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr8','cornflowerblue')" onmouseout="changeColor('tr8','white')" id="tr8">
+
+							<img src="img/搜狗截图20170829180948.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">戴上手套擦泪</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr9','cornflowerblue')" onmouseout="changeColor('tr9','white')" id="tr9">
+
+							<img src="img/搜狗截图20170829181014.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">现代城市的发明</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr10','cornflowerblue')" onmouseout="changeColor('tr10','white')" id="tr10">
+
+							<img src="img/搜狗截图20170829181048.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">安德鲁的大脑</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr11','cornflowerblue')" onmouseout="changeColor('tr11','white')" id="tr11">
+
+							<img src="img/搜狗截图20170829181239.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">沉睡的人鱼之家</p>
+							</a>
+
+						</div>
+
+						<div class="small" class="small" onmouseover="changeColor('tr12','cornflowerblue')" onmouseout="changeColor('tr12','white')" id="tr12">
+
+							<img src="img/搜狗截图20170829182004.png" width="163px" height="208px">
+							<a href="#">
+								<p style="font-size: 15px; color: gray;">盐</p>
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			
+			<!--电子图书-->
+			<div id="book">
+				<table height="445px" width="80%" border="0px solid gray" align="center">
+					<div id="radio">
+
+						<ul>
+							<a href="#">
+								<li style="font-size: 25px;">电子图书</li>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							</a>
+							<a href="#">
+								<li>查看更多</li>
+							</a>&nbsp;&nbsp;&nbsp;
+						</ul>
+
+					</div>
+					<!--div自己就占一行，不用再弄表格-->
+
+					<tr>
+						<td width="93px" height="125px">
+							<img src="img/电子.png" width="83px" height="115px" align="left" />
+						</td>
+						<td width="600px" height="125px">
+							<p style="font-size: 15px; color: gray;">
+								作者: 碧野圭 <br /> 原作名: 菜の花食堂のささやかな事件簿<br /> 马克吐温说：人生成功的一部分秘诀是，吃下爱吃的东西，然后让食物在肚子里斗争到底。
+								<br /> 赛尔斯说：食之过饱，心灵无法容忍躯体；食不果腹，躯体同样无法支撑心灵。 我常常说<br /> 人生最幸福的事情就是：忙完一天的工作...
+								<a href="#">全文</a>
+							</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td width="93px" height="125px">
+							<img src="img/电子1.png" width="83px" height="115px" align="left" />
+						</td>
+						<td width="600px" height="125px">
+							<p style="font-size: 15px; color: gray;">
+								作者: 曾锴 <br /> 出版社: 光明日报出版社<br /> 出版年: 2017-8-31<br /> 我用知乎大概一年了，偶尔会看看感兴趣的问题与答案，大概两三个月之前我关注的一个知
+								<br/> 乎大V，ta转发了一条别人反驳ta 回答的wb，那个反驳的人就是拔叔。我出于好奇点进去<br/> 看了，看了回答觉得这是一个有眼界有逻辑...
+								<a href="#">全文</a>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="93px" height="125px">
+							<img src="img/电子2.png" width="83px" height="115px" align="left" />
+						</td>
+						<td width="600px" height="125px">
+							<p style="font-size: 15px; color: gray;">
+								作者: 张翎 <br /> 出版社: 人民文学出版社<br /> 出版年: 2017-7<br /> 和平年代的我们无法感受战争的残酷，即便看了再多的影视作品，隔岸观火依然无法比拟身
+								<br /> 临其境。但我们也必须感谢这些描写着战争的作品，正是它们重现了战火纷飞的年代，展现
+								<br /> 了战争时期人性的泯灭及伟大。那些血与...
+								<a href="#">全文</a>
+							</p>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+
+			<!--8.友情链接-->
+			<div id="youqing">
+				<table border="0px" solid gray; width="100%" height="125px" bgcolor=gray>
+					<tr>
+						<td width="338px" height="120px">
+							<a href="#">
+								<font size="5">关于CR</font>
+							</a><br /><br />
+							<a href="#">给我留言</a><br />
+							<a href="#">个人档案</a><br />
+							<a href="#">热点标签</a><br />
+							<a href="#">我的博客</a><br />
+							<a href="#">我的微博</a><br />
+							<br /><br />
+							
+						</td>
+
+						<td width="1014px" height="100px">
+							<a href="#">
+								<font size="5">友情链接</font>
+							</a><br /><br />
+							<a href="#">个人档案</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">热点标签</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">豆瓣书店</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">QQ阅读</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">文学青年</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">哲思</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">新青年</a>&nbsp;&nbsp;&nbsp;
+
+						</td>
+
+						<td width="338px" height="120px">
+							<a href="#">
+								<font size="5">了解更多</font>
+							</a><br /><br />
+							<a href="#">分享心得</a><br />
+							<a href="#">读书探讨</a><br />
+							<a href="#">网站开发</a><br />
+							<a href="#">深夜电台</a><br />
+							<a href="#">英语平台</a><br />
+							<br /><br />
+						</td>
+
+					</tr>
+
+				</table>
+			</div>
+			<!--版权-->
+			<div id="youqing">
+				<a href="#" style="color: #000000;" ><font size="5">版权归陈茹所有</font></a>
+			</div>
+	</body>
+
+</html>

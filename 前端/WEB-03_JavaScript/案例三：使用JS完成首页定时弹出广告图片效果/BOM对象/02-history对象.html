@@ -1,0 +1,18 @@
+<!--通过对象调用方法实现页面的调转-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>history对象</title>
+		<script>
+			function aback(){
+				history.go(-1);
+				//history.back();返回上一页
+				//history.foward();进入下一页
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="返回上一页" onclick="aback()" />
+	</body>
+</html>

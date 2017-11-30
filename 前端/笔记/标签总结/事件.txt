@@ -1,0 +1,7 @@
+onfocus/onblur:聚焦；离焦事件；用于表单单行校验
+onclick/ondblclick：鼠标单击/双击事件
+onkeydown/onkeypress：搜索引擎 使用较多
+onload：页面加载事件，可采用匿名函数
+onmouseover/onmouseout/onmousemove：高亮文本，用于购物网站商品详情页面
+onsubmit：提交事件，放在form标签中
+onchange：改变内容事件

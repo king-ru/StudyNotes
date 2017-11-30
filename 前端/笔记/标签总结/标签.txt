@@ -1,0 +1,40 @@
+浮动：float（float：left/right;）
+外部引入：<link rel="stylesheet" href="style.css" （文件名称）type="text/css"/>
+空格键：&nbsp
+换行：<br/>
+无序标签：<ul>
+		 <li></li>
+		 <li></li>
+		 <li></li>
+		</ul>
+<a href="#"><li style="font-size: 15px;">首页</li>(超链接，无序标签，以及设置属性)
+将无序标签整合为一行：ul li{
+					display: inline;
+					color: white;
+				}
+水平线：<hr>
+消去超链接下面横线：a{
+					text-decoration: none;
+				}
+<span></span>：在同一行直接显示内容
+
+表头标签：
+<thead>
+	<tr>
+		<th></th>
+	</tr>
+</thead>
+表格标签：
+<tbody>
+	<tr>
+		<td></td>
+	</tr>
+</tbody>
+
+标签是有语义的：标题用<h1>，表格展示用<table>，链接用<a>，无序排列用<ul>等等。
+
+标签里可带有各类属性，最基本的就是class和id。class属性的作用是引用css样式；id的作用是配合javascript使用，具有唯一性。下面举几个例子说明
+
+图片标签<img>的主要属性有src，alt。src是引用图片的网络地址（必要）；alt是对这张图片的描述，如果图片加载不成功，则会显示alt的文字。
+
+超链接<a>的主要属性有href，target。href是指链接要跳转的网址（必要）；target是告诉浏览器点击这个链接后要以哪种形式找开窗口，target=”_blank”是指打开一个新窗口

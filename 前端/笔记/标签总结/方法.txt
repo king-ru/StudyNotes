@@ -1,0 +1,10 @@
+confirm("确认删除？");//带两个选择按钮的确认弹出框
+prompt("请输入价格");带两个选择按钮的输入框
+//向指定位置输出内容
+	document.getElementById("name").innerHTML="<font color='gray'>用户名必须填写</font>";
+
+
+向页面输出：
+	弹窗：alert（）；
+	向浏览器中写入内容：document.write(内容);
+	向页面指定位置写入内容，调用对象的innerHTML属性。

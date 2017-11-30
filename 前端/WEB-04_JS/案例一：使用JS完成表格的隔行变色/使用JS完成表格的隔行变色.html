@@ -1,0 +1,61 @@
+<!--事件+传参操作-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表格变色</title>
+		<script>
+			//变量只能用于方法作为形参传入，不能作为具体数赋值
+			//加入标识符，减少重复代码
+			function changeColor(id,flag){
+				if(flag=="red")
+					document.getElementById(id).style.backgroundColor="red";
+				else if(flag=="white")
+					document.getElementById(id).style.backgroundColor="white";
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<table border="1px" height="100px" width="500px" align="center" id="tb">
+			<thead>
+				<tr >
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr onmouseover="changeColor('tr1','red')" onmouseout="changeColor('tr1','white')" id="tr1">
+					<td>1</td>
+					<td>张三</td>
+					<td>22</td>
+				</tr>
+				<tr onmouseover="changeColor('tr2','red')" onmouseout="changeColor('tr2','white')" id="tr2">
+					<td>2</td>
+					<td>张四</td>
+					<td>23</td>
+				</tr>
+				<tr onmouseover="changeColor('tr3')" onmouseout="resetColor('tr3')" id="tr3">
+					<td>3</td>
+					<td>张五</td>
+					<td>24</td>
+				</tr>
+				<tr onmouseover="changeColor()" onmouseout="resetColor()" id="tr4">
+					<td>4</td>
+					<td>张六</td>
+					<td>25</td>
+				</tr>
+				<tr onmouseover="changeColor()" onmouseout="resetColor()" id="tr5">
+					<td>5</td>
+					<td>张七</td>
+					<td>26</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</body>
+
+</html>

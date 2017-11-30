@@ -1,0 +1,4 @@
+输出方式：
+1.警告框：alert（）
+2.向指定位置写入内容：innerHTML（属性）
+3.写入内容：document.write("")

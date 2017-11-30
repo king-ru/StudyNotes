@@ -1,0 +1,27 @@
+---
+tittle: JS notes
+data: 2017-09-17 19.00
+tag: notes
+---
++ JavaScript简介：JavaScript被设计用来向HTML页面添加交互行为。
++ javascript的作用？
+    + HTML：它是整个网站的骨架。
+    + CSS：它是对整个网站骨架的内容进行美化(修饰)
+    + Javascript：它能够让整个页面具有动态效果。
++ js组成部分
+
+|ECMAScrip|DOM|BOM|
+|-|
+  ECMAScript:它是javascript的核心(语法、变量、数据类型、语句、函数……)</br>
+  DOM:document object model 整个文档对象</br>
+  BOM:浏览器对象
++ javascript的引入方式</br>
+内部引入方式
+	直接将javascript代码写到<script type=”text/javascript”[可以省略]></script></br>
+外部引入方式
+	需要创建一个.js文件，在里面书写javascript代码，然后在html文件中通过script标签的src属性引入该外部的js文件</br>
++ js对象
+BOM对象：浏览器对象模型(操作与浏览器相关的内容)</br>
+Window对象</br>
+Window 对象表示浏览器中打开的窗口。</br>
+![](D:\Atom图片\图片1.png)

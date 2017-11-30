@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单标签</title>
+	</head>
+	<body>
+		<!--但凡需要提交给后台的，都需要用form标签-->
+		<form action="#" method="get">
+			隐藏字段：<input type="hidden" name="id" /><br />
+			用户名:<input type="text" name="username" size="40px" maxlength="5" placeholder="请输入用户名"/><br />
+			<!--加了name属性之后就可以提交文本框中的内容，name可以是任何值，为了方便，用username-->
+			密码：<input type="password" name="password" required="required"/><br />
+			<!--required="required":检查一定要填写-->
+			确认密码:<input type="password" name="repassword"/><br />
+			性别:<input type="radio" name="sex" value="男"/>男
+			<!--提交给后台的是value里面的内容，标签中间的是显示给用户看的。-->
+			<input type="radio" name="sex" value="女" checked="checked"/>女<br />
+			<!--checked="checked"代表一加载网页就会直接勾选女。-->
+			爱好:<input type="checkbox" name="hobby" value="唱歌"/>唱歌
+			<input type="checkbox" name="hobby" value="吃"/>吃
+			<input type="checkbox" name="hobby" value="睡觉"/>睡觉<br />
+			<!--有选择性的要有value属性-->
+			头像：<input type="file" name="file"/><br />
+			籍贯：<select name="provice"/>
+				<option>--请选择---</option>
+				<option value="北京">--北京---</option>
+				<option value="上海" selected="selected">--上海---</option>
+				<!--selected="selected"代表一加载网页就会直接勾选上海。-->
+				<option value="广州">--广州---</option>
+			</select><br />
+			自我介绍：
+			<textarea name="自我介绍">
+				
+			</textarea><br />
+			提交按钮：<input type="submit" value="提交"/><br />
+			普通按钮：<input type="button" value="注册" /><br />
+			重置按钮：<input type="reset"/>
+			<!--按钮不用加name属性，因为name里面指的是用户需要提交的内容，通过按钮来实现这个功能。-->
+			
+			<ul>
+				<li><a href="../../img/null-ae1d3267cdf28ab.jpg">点开我有惊喜</a></li><br />
+				<li><a href="../../img/Cache_-75f9ee7164e988ad..jpg">还有呢</a></li><br />
+				<li><a href="../../img/1262120843F206418844DD39AAA68FAE8C6E18FFDD.jpg">这次真的有</a></li><br />
+				
+				
+			</ul>
+			
+		</form>
+	</body>
+</html>

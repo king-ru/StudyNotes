@@ -1,0 +1,6 @@
+##JQ页面与JS页面加载区别
+
+![](https://raw.githubusercontent.com/king-ru/HTML-notes/master/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20170916114254.png)
+##DOM对象和JQ对象的相互转换
+
+![](https://raw.githubusercontent.com/king-ru/HTML-notes/master/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20170916114413.png)

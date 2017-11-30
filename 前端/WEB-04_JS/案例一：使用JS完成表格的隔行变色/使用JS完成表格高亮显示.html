@@ -1,0 +1,82 @@
+<!--步骤分析：
+1.确定事件（onload）并为其绑定一个函数
+2.书写函数（获取表格）
+3.获取tbody里面的函数（rows。length）
+4.对tobody里面的行进行遍历
+5.获取奇数行和偶数行（角标对2取余）
+6.分别对奇数行和偶数行设置背景颜色。-->
+
+
+
+
+<!--通过数组的方式对表格实现遍历。-->
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表格变色</title>
+		<script>
+			//采用的是匿名函数
+			window.onload=function(){
+				var tbEle=document.getElementById("tb");
+				var j=tbEle.tBodies[0].rows.length;
+				for(var i=0;i<j;i++){
+					
+					if(i%2==0)
+						//document.getElementById("i").style.backgroundColor="green";
+						//注意：不能通过获取id的方式对表格遍历，只能用数组的方式。
+						tbEle.tBodies[0].rows[i].style.backgroundColor="green";
+					else
+						tbEle.tBodies[0].rows[i].style.backgroundColor="red";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<table border="1px" height="100px" width="500px" align="center" id="tb">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="0">
+					<td>1</td>
+					<td>张三</td>
+					<td>22</td>
+				</tr>
+				<tr id="1">
+					<td>2</td>
+					<td>张四</td>
+					<td>23</td>
+				</tr>
+				<tr id="2">
+					<td>3</td>
+					<td>张五</td>
+					<td>24</td>
+				</tr>
+				<tr id="3">
+					<td>4</td>
+					<td>张六</td>
+					<td>25</td>
+				</tr>
+				<tr id="4">
+					<td>5</td>
+					<td>张七</td>
+					<td>26</td>
+				</tr>
+				<tr id="5">
+					<td>6</td>
+					<td>张八</td>
+					<td>27</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

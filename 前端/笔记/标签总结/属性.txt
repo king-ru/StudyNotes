@@ -1,0 +1,8 @@
+text-align：设置按钮位置
+
+background-color属于css样式表里面的所以这样写style="background-color:背景颜色"
+
+bgColor属于HTML里面的所以这样写bgColor="背景颜色"
+
+建议统一用样式的写法，在实现表格隔行变色的时候，在IE里把background-color改为bgcolor，就没效果
+ 
