@@ -1,3 +1,10 @@
+git 使用5步走：
+git init
+git add XX
+git commit -m “XXX”
+git remote add origin https://github.com/king-ru/文件夹
+git push -u （第一次要用u，以后不需要）origin master
+
 git基本命令如下：
 mkdir：		XX（创建一个空目录 XX）
 pwd：			显示当前目录的路径
