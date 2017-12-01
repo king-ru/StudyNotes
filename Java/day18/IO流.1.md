@@ -38,7 +38,7 @@
 
 - 凡是和设备上的数据发生关系的，对数据进行处理的，都会发生IO异常，无论是读还是写
 
-  ![3](..\photo\3.png)
+  ![3](../photo/3.png)
 
 - 一定要对fw进行判空操作，否则当fw对象创建失败时，就无法进行fw.close();会出现空指针异常
 
@@ -49,7 +49,7 @@
   ```java
   //传递一个true参数，代表不覆盖已有的文件，并在已有文件的末尾处进行数据续写
   FileWriter fw=new FileWriter("demo.txt",true);
-  fw.write("thank\r\nyou");//window中换行为\r\n
+  fw.write("thank/r/nyou");//window中换行为/r/n
   fw.close();
   ```
 
@@ -57,11 +57,11 @@
 
 ### 文本读取方式一：存入一个读取一个
 
-![2](..\photo\2.png)
+![2](../photo/2.png)
 
 ### 文本读取方式二：通过字符数组存取（全部存入之后一次性读取）
 
-![4](..\photo\4.png)
+![4](../photo/4.png)
 
 ## 将c盘的一个文件复制到D盘，Java代码实现
 
