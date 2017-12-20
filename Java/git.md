@@ -86,4 +86,10 @@ git stash drop：删除文件。
 
 git stash pop：恢复文件的同时也删除文件。
 
+
+
+- 当出现本地和远程发生冲突时，执行(同步本地和远程仓库)
+```
+git pull origin master
+```
 ---
