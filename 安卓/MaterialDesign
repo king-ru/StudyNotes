@@ -1,0 +1,12 @@
+# MaterailDesign
+## ToolBar
+- 基本用法
+```
+Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+setSupportActionBar(toolbar);//既使用了toolbar，也让其外观和功能和actionbar相同
+ActionBar actionBar=getSupportActionBar();//获取actionbar实例
+if (actionBar!=null){
+    actionBar.setDisplayHomeAsUpEnabled(true);  //显示导航按钮
+    actionBar.setHomeAsUpIndicator(R.mipmap.ic_menu);  //导航按钮图标
+    }
+```
