@@ -9,7 +9,7 @@
 ### Introduction
 #### CNNs优势
 -  为提高准确率，应该使用较大的数据集，同时应该有大量的先验知识来补偿所没有的数据。
--  控制容量：Their capacity can be con-trolled by varying their depth and breadth, and they also make strong and mostly correct assumptions about the nature of images (namely, stationarity of statistics and locality of pixel dependencies). 
+-  控制容量：Their capacity can be con-trolled by varying their depth and breadth, and they also make strong and mostly correct assumptions about the nature of images (namely, stationarity of statistics and locality of pixel dependencies).
 -  容易训练（参数较少），准确率高：compared to standard feedforward neural networks with similarly-sized layers, CNNs have much fewer connections and parameters and so they are easier to train, while their theoretically-best performance is likely to be only slightly worse.
 #### CNNs改进
 - 大规模应用于高分辨率图像成本较高
@@ -19,7 +19,8 @@
 #### ReLU Nonlinearity
 -  具有ReLU的网络学习速度总是比饱和神经元快几倍
 -  : A four-layer convolutional neural network with ReLUs (solid line) reaches a 25% training error rate on CIFAR-10 six times faster than an equivalent network with tanh neurons (dashed line).
-- ![figure 1](F:\StudyNotes\machine-learning\photo\Paper\1.png)
+
+-![](https://raw.githubusercontent.com/king-ru/StudyNotes/master/machine-learning/photo/Paper/1.png)
 
 #### Training on Multiple GPUs
 -  GPUs并行化：hey are able to read from and write to one another’s memory directly, without going through host machine memory.
@@ -38,7 +39,9 @@
 -  结构
   -  the net contains eight layers with weights; the first five are convolutional and the remaining three are fully-connected.
   -  The output of the last fully-connected layer is fed to a 1000-way softmax which produces a distribution over the 1000 class labels
--  ![figure 2](F:\StudyNotes\machine-learning\photo\Paper\2.png)
+
+![](https://raw.githubusercontent.com/king-ru/StudyNotes/master/machine-learning/photo/Paper/2.png)
+
 -  两个GPU之间的划分：One GPU runs the layer-parts at the top of the figure while the other runs the layer-parts at the bottom. The GPUs communicate only at certain layers.
 
 ### Reducing Overfitting
